@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form and Entries List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <small class="error-message" id="name-error"></small>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <small class="error-message" id="email-error"></small>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    <small class="error-message" id="message-error"></small>
+
+    <button type="submit">Submit</button>
+</form>
+
+<table id="entriesTable">
+    <thead>
+    <tr>
+        <th onclick="sortTable(0)">Name</th>
+        <th onclick="sortTable(1)">Email</th>
+        <th onclick="sortTable(2)">Message</th>
+        <th onclick="sortTable(3)">Date Added</th>
+    </tr>
+    </thead>
+    <tbody class="records"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
